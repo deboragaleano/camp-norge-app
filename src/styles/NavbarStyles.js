@@ -1,0 +1,24 @@
+const styles = theme => ({
+    root: {
+        width: '100%',
+        marginBottom: 0
+    },
+    grow: {
+        flexGrow: 1
+    },
+    menuBottom: {
+        marginLeft: -12,
+        marginRight: 20
+    },
+    //this is showing and hiding content at a certain breakpoint 
+    // this is like media-query or something.. 
+    // if it's below small screen size then it should not show up
+    title: {
+        display: 'none',
+        [theme.breakpoints.up('sm')]: {
+            display: 'block'
+        }
+    },
+});
+
+export default styles; 

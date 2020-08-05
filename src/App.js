@@ -1,11 +1,12 @@
 import React from 'react';
 import './App.css';
-import CampsList from './campgrounds/CampsList';
+import CampsList from './components/CampsList';
+import Navbar from './components/Navbar';
 
 function App() {
   return (
     <div className="App">
-      <h1>Camp norge App</h1>
+      <Navbar />
       <CampsList /> 
     </div>
   );

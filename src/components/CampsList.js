@@ -1,6 +1,9 @@
 import React from 'react';
+import Camp from './Camp'; 
 
 export default function CampsList() {
-    return <h1>CampsList</h1>
+    return (
+        <Camp /> 
+    )
 }
 
