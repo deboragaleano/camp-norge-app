@@ -5,9 +5,9 @@ import CampItem from './CampItem';
 
 const useStyles = makeStyles((theme) => ({
     grid: {
-        marginTop: '20px',
-        alignItems: 'center',
-        justify: 'center'
+        maxWidth: '100%',
+        minHeight: '100vh',
+        margin: '20px' 
     },
     card: {
       padding: theme.spacing(2),
@@ -21,18 +21,24 @@ export default function CampsList() {
     return (
         <Grid 
             container
-            spacing={2} 
+            spacing={1} 
             className={classes.grid}
             >
-                <Grid item xs={12} md={3}>
-                    <CampItem className={classes.card}/> 
-                </Grid>
-                <Grid item xs={12} md={3}>
-                    <CampItem className={classes.card}/> 
-                </Grid>
-                <Grid item xs={12} md={3}>
-                    <CampItem className={classes.card}/> 
-                </Grid>
+            <Grid item xs={12} sm={6} md={4}>
+                <CampItem className={classes.card}/> 
+            </Grid>
+            <Grid item xs={12} sm={6} md={4}>
+                <CampItem className={classes.card}/> 
+            </Grid>
+            <Grid item xs={12} sm={6} md={4}>
+                <CampItem className={classes.card}/> 
+            </Grid>
+             <Grid item xs={12} sm={6} md={4}>
+                <CampItem className={classes.card}/> 
+            </Grid>
+            <Grid item xs={12} sm={6} md={4}>
+                <CampItem className={classes.card}/> 
+            </Grid>
         </Grid>
     )
 }
