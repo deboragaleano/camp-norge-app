@@ -1,4 +1,5 @@
 import React from 'react';
+// import {CampsContext} from '../contexts/camps.context'; 
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid'; 
 import Container from '@material-ui/core/Container'; 
@@ -26,18 +27,6 @@ export default function CampsList() {
                 spacing={2} 
                 className={classes.grid}
                 >
-                <Grid item xs={12} sm={6} md={4}>
-                    <CampItem className={classes.card}/> 
-                </Grid>
-                <Grid item xs={12} sm={6} md={4}>
-                    <CampItem className={classes.card}/> 
-                </Grid>
-                <Grid item xs={12} sm={6} md={4}>
-                    <CampItem className={classes.card}/> 
-                </Grid>
-                <Grid item xs={12} sm={6} md={4}>
-                    <CampItem className={classes.card}/> 
-                </Grid>
                 <Grid item xs={12} sm={6} md={4}>
                     <CampItem className={classes.card}/> 
                 </Grid>
