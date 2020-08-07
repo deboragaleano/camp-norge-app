@@ -16,11 +16,9 @@ function CampItem(props) {
     return (
         <Card className={classes.root}>
             <CardActionArea>
-            <CardMedia
-                className={classes.media}
-                image=''
-                title=''
-            />
+            <CardMedia className={classes.media}> 
+                <img src='someimgae' alt='some some'/>
+            </CardMedia>
             <CardContent>
                 <Typography gutterBottom variant="h5" component="h2">
                 Lizard
