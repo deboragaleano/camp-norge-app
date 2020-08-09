@@ -7,11 +7,12 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import IconButton from '@material-ui/core/IconButton';
 import Avatar from '@material-ui/core/Avatar';
+import ShareIcon from '@material-ui/icons/Share';
+import FavoriteIcon from '@material-ui/icons/Favorite';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import {withStyles} from '@material-ui/core/styles';
 import styles from '../styles/CampItemStyles'; 
-
 
 function CampItem(props) {
     const {classes} = props; 
@@ -24,23 +25,25 @@ function CampItem(props) {
         title={props.camp.title}
       />
       <CardActionArea>
-        <CardContent>
+        <CardContent align='left'>
           <Typography gutterBottom variant="h5" component="h2">
             Lizard
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
             Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-            across all continents except Antarctica
+            across all continents except Antarctica.
+   
           </Typography>
+          <Button className={classes.button} variant='contained' size='small' color='secondary' href='/'>Read More</Button>
         </CardContent>
           <Container>
-            <CardActions>
-            <Button size="small" color="primary">
-              Share
-            </Button>
-            <Button size="small" color="primary">
-              Learn More
-            </Button>
+            <CardActions disableSpacing>
+            <IconButton aria-label="add to favorites">
+          <FavoriteIcon />
+        </IconButton>
+        <IconButton aria-label="share">
+        <ShareIcon />
+        </IconButton>
             <Container className={classes.user}>
               <IconButton aria-label="user">
                  <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />

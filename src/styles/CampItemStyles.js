@@ -24,6 +24,11 @@ const styles = theme => ({
   nameUser: {
     alignSelf: 'center',
     flexDirection: 'row'
+  },
+  button: {
+    palette: {
+      primary: '#009688',
+    },
   }
 });
 
