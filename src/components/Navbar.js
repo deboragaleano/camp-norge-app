@@ -10,10 +10,10 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import {withStyles} from '@material-ui/core/styles';
 import styles from '../styles/NavbarStyles'; 
+import { Hidden } from '@material-ui/core';
 
 function Navbar(props){
     const {classes} = props; 
-
     const [anchorEl, setAnchorEl] = React.useState(null);
 
     const handleClick = (event) => {
@@ -27,10 +27,11 @@ function Navbar(props){
     return (
             <AppBar position="static" color='primary'>
                 <Toolbar>
-                    
-                    <IconButton edge='start' color="inherit">
-                        <MenuIcon className={classes.menuButton}  aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}/>
-                    </IconButton>
+                    <Hidden smUp>
+                        <IconButton edge='start' color="inherit">
+                            <MenuIcon className={classes.menuButton}  aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}/>
+                        </IconButton>
+                    </Hidden>
                     <Menu
                         id="simple-menu"
                         anchorEl={anchorEl}
@@ -44,17 +45,15 @@ function Navbar(props){
 
                         <MenuItem component={NavLink} to='/campgrounds/new' onClick={handleClose}>Add new camp</MenuItem>
 
-                        <MenuItem component={NavLink} to='/campgrounds/new' onClick={handleClose}>Authenticate</MenuItem>
-
+                        <MenuItem component={NavLink} to='/' onClick={handleClose}>Authenticate</MenuItem>
                     </Menu>
                     
-                
-                    <NavLink to='/' style={{textDecoration: 'none', color: 'white', hover: 'pink'}}>
-                        <Typography className={classes.title} variant='h6'>
-                            Campgrounds
-                        </Typography>
-                    </NavLink>
-
+                    <Button className={classes.title} color='inherit' component={NavLink} to='/'>
+                        Campgrounds
+                    </Button>
+                    <Button className={classes.title} color='inherit' component={NavLink} to='/campgrounds/new'>
+                        New Camp
+                    </Button>
 
                     <div className={classes.grow}/>
                     <Button color="inherit">Login</Button>

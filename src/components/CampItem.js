@@ -33,9 +33,7 @@ function CampItem(props) {
           <Typography variant="body2" color="textSecondary" component="p">
             Lizards are a widespread group of squamate reptiles, with over 6,000 species, rangin across all continents except Antarctica.
           </Typography>
-          <Link to={`/${props.camp.id}`} style={{textDecoration: 'none'}}>
-            <Button className={classes.button} variant='contained' size='small' color='secondary'>Read More</Button>
-          </Link>
+            <Button className={classes.button} component={Link} to={`/${props.camp.id}`}  variant='contained' size='small' color='secondary'>Read More</Button>
         </CardContent>
           <Container>
             <CardActions disableSpacing>

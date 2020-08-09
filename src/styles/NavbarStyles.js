@@ -14,9 +14,11 @@ const styles = theme => ({
     // if it's below small screen size then it should not show up
     title: {
         display: 'none',
+        textDecoration: 'none',
         [theme.breakpoints.up('sm')]: {
             display: 'block'
-        }
+        },
+        marginRight: theme.spacing(2),
     },
 });
 
