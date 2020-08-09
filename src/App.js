@@ -1,6 +1,6 @@
 import React from 'react';
 import {Switch, Route, Redirect} from 'react-router-dom'; 
-import CampsList from './components/CampsList';
+import Camps from './components/Camps';
 import Users from './components/Users';
 import NewCamp from './components/NewCamp';
 import Navbar from './components/Navbar';
@@ -12,7 +12,7 @@ function App() {
       <Navbar />
 
       <Switch>
-        <Route exact path='/' component={CampsList} />
+        <Route exact path='/' component={Camps} />
         <Route exact path='/users' component={Users} />
         <Route exact path='/camps/new' component={NewCamp} />
         <Redirect to='/' />
