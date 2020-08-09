@@ -7,8 +7,7 @@ const styles = theme => ({
         flexGrow: 1
     },
     menuBottom: {
-        marginLeft: -12,
-        marginRight: 20
+        marginRight: theme.spacing(2),
     },
     //this is showing and hiding content at a certain breakpoint 
     // this is like media-query or something.. 

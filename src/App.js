@@ -14,7 +14,7 @@ function App() {
       <Switch>
         <Route exact path='/' component={Camps} />
         <Route exact path='/users' component={Users} />
-        <Route exact path='/camps/new' component={NewCamp} />
+        <Route exact path='/campgrounds/new' component={NewCamp} />
         <Redirect to='/' />
       </Switch>
     </div>

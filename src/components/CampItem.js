@@ -1,6 +1,7 @@
 import React from 'react';
 import Card from '@material-ui/core/Card';
 import Container from '@material-ui/core/Container';
+import {Link} from 'react-router-dom';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
@@ -30,11 +31,11 @@ function CampItem(props) {
             Lizard
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-            Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-            across all continents except Antarctica.
-   
+            Lizards are a widespread group of squamate reptiles, with over 6,000 species, rangin across all continents except Antarctica.
           </Typography>
-          <Button className={classes.button} variant='contained' size='small' color='secondary' href='/'>Read More</Button>
+          <Link to={`/${props.camp.id}`} style={{textDecoration: 'none'}}>
+            <Button className={classes.button} variant='contained' size='small' color='secondary'>Read More</Button>
+          </Link>
         </CardContent>
           <Container>
             <CardActions disableSpacing>
@@ -46,7 +47,7 @@ function CampItem(props) {
         </IconButton>
             <Container className={classes.user}>
               <IconButton aria-label="user">
-                 <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
+                 <Avatar alt="Maria" src="/static/images/avatar/1.jpg" />
               </IconButton>
               <div className={classes.nameUser}>Maria</div>
             </Container>

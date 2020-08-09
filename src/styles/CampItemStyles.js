@@ -29,6 +29,9 @@ const styles = theme => ({
     palette: {
       primary: '#009688',
     },
+  },
+  link: {
+    underline: 'none' 
   }
 });
 
