@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
         margin: '20px' 
     },
     card: {
-      padding: theme.spacing(2),
+      padding: theme.spacing(1),
       color: theme.palette.text.secondary,
     },
 }));
@@ -21,10 +21,10 @@ const CampsList = props => {
 
     return (
         <Container >
-            <Grid container spacing={2} className={classes.grid}>
+            <Grid container spacing={1} className={classes.grid}>
                 {props.camps.map(camp => (
-                <Grid item xs={12} sm={6} md={4}>
-                    <CampItem className={classes.card} key={camp.id} camp={camp} /> 
+                <Grid  key={camp.id} item xs={12} >
+                    <CampItem className={classes.card} camp={camp} /> 
                 </Grid>
                ))}
             </Grid>
