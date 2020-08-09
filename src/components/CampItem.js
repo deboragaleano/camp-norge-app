@@ -17,15 +17,14 @@ function CampItem(props) {
         <Card className={classes.root}>
             <CardActionArea>
             <CardMedia className={classes.media}> 
-                <img src='someimgae' alt='some some'/>
+                <img src={props.camp.image} alt='some some'/>
             </CardMedia>
             <CardContent>
                 <Typography gutterBottom variant="h5" component="h2">
                  {props.camp.title}
                 </Typography>
                 <Typography variant="body2" color="textSecondary" component="p">
-                Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                across all continents except Antarctica
+                    {props.camp.description}
                 </Typography>
             </CardContent>
             </CardActionArea>

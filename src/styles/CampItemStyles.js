@@ -3,7 +3,7 @@ const styles = themes => ({
       maxWidth: 345,
     },
     media: {
-      height: 140,
+      width: '100%',
     },
 });
 
