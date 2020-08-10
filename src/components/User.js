@@ -4,7 +4,6 @@ import Container from '@material-ui/core/Container';
 import {Link} from 'react-router-dom';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import {withStyles} from '@material-ui/core/styles';
@@ -18,7 +17,7 @@ const User = (props) => {
         <Card className={classes.root}>
             <Container>
                 <img className={classes.cover}
-                src='https://avatars.dicebear.com/v2/avataaars/3fa197ba4a56aee8c78217c03c9b7a02.svg'
+                src={props.user.image}
                 alt='Some user'
             />
             </Container>
@@ -27,7 +26,7 @@ const User = (props) => {
             <Typography gutterBottom variant="h6" component="h2">
                 {props.user.name}
             </Typography>
-                <Button className={classes.button} variant='contained' size='small' color='secondary'>{props.camps.length > 1 ? 'Places' : 'Place'}</Button>
+                <Button className={classes.button} variant='contained' size='small' color='secondary'>{props.user.campsCount > 1 ? 'Places' : 'Place'}</Button>
             </CardContent>
         </CardActionArea>
         </Card>
