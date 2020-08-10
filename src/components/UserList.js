@@ -1,5 +1,5 @@
 import React from 'react';
-import User from './User';
+import UserItem from './UserItem';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid'; 
 import Container from '@material-ui/core/Container'; 
@@ -24,7 +24,7 @@ const UserList = (props) => {
             <Grid container spacing={1} className={classes.grid}>
                 {props.users.map(user => (
                 <Grid  key={user.id} item xs={12} >
-                    <User className={classes.card} user={user} /> 
+                    <UserItem className={classes.card} user={user} /> 
                 </Grid>
             ))}
             </Grid>

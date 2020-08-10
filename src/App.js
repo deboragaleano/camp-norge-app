@@ -5,6 +5,7 @@ import Users from './components/Users';
 import NewCamp from './components/NewCamp';
 import Navbar from './components/Navbar';
 import './App.css';
+import UserPage from './components/UserPage';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Switch>
         <Route exact path='/' component={Camps} />
         <Route exact path='/users' component={Users} />
+        <Route exact path='/users/:userId' component={UserPage} />
         <Route exact path='/campgrounds/new' component={NewCamp} />
         <Redirect to='/' />
       </Switch>

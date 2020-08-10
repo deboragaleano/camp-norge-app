@@ -9,7 +9,7 @@ import Typography from '@material-ui/core/Typography';
 import {withStyles} from '@material-ui/core/styles';
 import styles from '../styles/UserStyles'; 
 
-const User = (props) => {
+const UserItem = (props) => {
     const {classes} = props; 
 
   return (
@@ -26,7 +26,7 @@ const User = (props) => {
             <Typography gutterBottom variant="h6" component="h2">
                 {props.user.name}
             </Typography>
-                <Button className={classes.button} variant='contained' size='small' color='secondary'>{props.user.campsCount > 1 ? `${props.user.campsCount} Places` : `${props.user.campsCount} Place`}</Button>
+                <Button className={classes.button} variant='contained' size='small' color='secondary'>{props.user.camps} {props.user.camps > 1 ? 'Places' : 'Place'}</Button>
             </CardContent>
         </CardActionArea>
         </Card>
@@ -34,5 +34,5 @@ const User = (props) => {
   );
 }
 
-export default withStyles(styles)(User); 
+export default withStyles(styles)(UserItem); 
     

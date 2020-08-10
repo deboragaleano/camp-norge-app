@@ -1,4 +1,5 @@
 import React from 'react';
+import UserPage from './UserPage';
 import Card from '@material-ui/core/Card';
 import Container from '@material-ui/core/Container';
 import {Link} from 'react-router-dom';
@@ -8,8 +9,8 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import IconButton from '@material-ui/core/IconButton';
 import Avatar from '@material-ui/core/Avatar';
-import ShareIcon from '@material-ui/icons/Share';
-import FavoriteIcon from '@material-ui/icons/Favorite';
+import DeleteIcon from '@material-ui/icons/Delete';
+import EditIcon from '@material-ui/icons/Edit';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import {withStyles} from '@material-ui/core/styles';
@@ -33,19 +34,20 @@ function CampItem(props) {
           <Typography variant="body2" color="textSecondary" component="p">
             Lizards are a widespread group of squamate reptiles, with over 6,000 species, rangin across all continents except Antarctica.
           </Typography>
-            <Button className={classes.button} component={Link} to={`/${props.camp.id}`}  variant='contained' size='small' color='secondary'>Read More</Button>
+            <Button className={classes.button} component={Link} to={`/${props.camp.id}`}  variant='contained' size='small' color='secondary'>View more</Button>
         </CardContent>
-          <Container>
-            <CardActions disableSpacing>
-            <IconButton aria-label="add to favorites">
-          <FavoriteIcon />
-        </IconButton>
-        <IconButton aria-label="share">
-        <ShareIcon />
-        </IconButton>
+            <Container>
+              <CardActions disableSpacing>
+              <Button className={classes.button}  variant='contained' size='small' color='default'>Map</Button>
+              <IconButton aria-label="edit">
+                <EditIcon />
+              </IconButton>
+              <IconButton aria-label="delete">
+                <DeleteIcon />
+              </IconButton>
             <Container className={classes.user}>
               <IconButton aria-label="user">
-                 <Avatar alt="Maria" src="/static/images/avatar/1.jpg" />
+                 <Avatar component={Link} to={`/users/${props.creator}`} alt="Maria" src="/static/images/avatar/1.jpg" />
               </IconButton>
               <div className={classes.nameUser}>Maria</div>
             </Container>
