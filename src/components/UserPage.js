@@ -26,10 +26,7 @@ const UserPage = () => {
                     <Typography variant='h2'>Maria Sergal</Typography>
                     <Divider /> 
                     <Typography variant='h4'>My Places</Typography>
-                    <ul>
-                        <li>Place1</li>
-                        <li>Place2</li>
-                    </ul>
+
                 </Paper>
             </div>
         </Container>
@@ -37,3 +34,8 @@ const UserPage = () => {
 }
 
 export default UserPage; 
+
+//TODO:
+// - SHOW name titles and link of camps only if the userId is === to current userId
+// I can use a filter()... 
+// Backend: in order to use the same props, I need to get access to the dummy data as well
