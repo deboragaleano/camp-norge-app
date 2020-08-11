@@ -1,4 +1,5 @@
 import React from 'react';
+import {useParams} from 'react-router-dom'; 
 import UserPage from './UserPage';
 import Card from '@material-ui/core/Card';
 import Container from '@material-ui/core/Container';
@@ -18,6 +19,7 @@ import styles from '../styles/CampItemStyles';
 
 function CampItem(props) {
     const {classes} = props; 
+    const userId = useParams().userId; 
 
   return (
     <Card className={classes.root}>
@@ -47,7 +49,7 @@ function CampItem(props) {
               </IconButton>
             <Container className={classes.user}>
               <IconButton aria-label="user">
-                 <Avatar component={Link} to={`/users/${props.creator}`} alt="Maria" src="/static/images/avatar/1.jpg" />
+                 <Avatar component={Link} to={`/users/${userId}`} alt="Maria" src="/static/images/avatar/1.jpg" />
               </IconButton>
               <div className={classes.nameUser}>Maria</div>
             </Container>
